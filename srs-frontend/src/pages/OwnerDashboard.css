@@ -1,13 +1,10 @@
-/* OwnerDashboard.css */
 
-/* Container styling */
 div {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
 
-/* Headings */
 h2 {
     font-size: 28px;
     font-weight: bold;
@@ -25,7 +22,6 @@ h3 {
     display: inline-block;
 }
 
-/* Table styling */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -51,7 +47,6 @@ tr:hover {
     background: #f5f5f5;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
     div {
         padding: 10px;

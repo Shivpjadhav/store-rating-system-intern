@@ -197,7 +197,6 @@ Rating: ${user.rating || "N/A"}
 
                 <h1>Admin Dashboard</h1>
 
-                {/* Dashboard Cards */}
 
                 <div
                     style={{
@@ -224,7 +223,6 @@ Rating: ${user.rating || "N/A"}
 
                 </div>
 
-                {/* Add User */}
 
                 <h2>Add User</h2>
 
@@ -311,7 +309,6 @@ Rating: ${user.rating || "N/A"}
 
                 </form>
 
-                {/* Add Store */}
 
                 <h2>Add Store</h2>
 
@@ -374,7 +371,6 @@ Rating: ${user.rating || "N/A"}
 
                 </form>
 
-                {/* Search */}
 
                 <input
                     type="text"
@@ -390,7 +386,6 @@ Rating: ${user.rating || "N/A"}
                     }}
                 />
 
-                {/* Users Table */}
 
                 <h2>Users</h2>
 
@@ -447,7 +442,6 @@ Rating: ${user.rating || "N/A"}
 
                 </table>
 
-                {/* Stores Table */}
 
                 <h2 style={{ marginTop: "30px" }}>
                     Stores

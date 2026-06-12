@@ -1,7 +1,6 @@
 const db = require("../db");
 const bcrypt = require("bcryptjs");
 
-// Dashboard Stats
 exports.dashboard = async (req, res) => {
     try {
 
@@ -32,7 +31,6 @@ exports.dashboard = async (req, res) => {
     }
 };
 
-// Add User
 exports.addUser = async (req, res) => {
 
     try {
@@ -76,7 +74,6 @@ exports.addUser = async (req, res) => {
     }
 };
 
-// Get All Users
 exports.getUsers = async (req, res) => {
 
     try {
@@ -104,7 +101,6 @@ exports.getUsers = async (req, res) => {
     }
 };
 
-// Get User Details
 exports.getUserById = async (req, res) => {
 
     try {
@@ -135,7 +131,6 @@ exports.getUserById = async (req, res) => {
 
         const user = users[0];
 
-        // If Store Owner, get average rating
         if (user.role === "STORE_OWNER") {
 
             const [[rating]] =
@@ -167,7 +162,6 @@ exports.getUserById = async (req, res) => {
     }
 };
 
-// Add Store
 exports.addStore = async (req, res) => {
 
     try {
@@ -206,7 +200,6 @@ exports.addStore = async (req, res) => {
     }
 };
 
-// Get All Stores
 exports.getStores = async (req, res) => {
 
     try {

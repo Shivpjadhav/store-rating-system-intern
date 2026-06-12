@@ -12,7 +12,6 @@ function App() {
         <BrowserRouter>
             <Routes>
 
-                {/* Public Routes */}
                 <Route
                     path="/"
                     element={<Login />}
@@ -23,19 +22,16 @@ function App() {
                     element={<Register />}
                 />
 
-                {/* Admin Routes */}
                 <Route
                     path="/admin/dashboard"
                     element={<AdminDashboard />}
                 />
 
-                {/* User Routes */}
                 <Route
                     path="/user/stores"
                     element={<UserStores />}
                 />
 
-                {/* Store Owner Routes */}
                 <Route
                     path="/owner/dashboard"
                     element={<OwnerDashboard />}
