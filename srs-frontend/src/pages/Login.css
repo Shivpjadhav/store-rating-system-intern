@@ -1,0 +1,69 @@
+/* Login.css */
+
+.container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    background: #fff;
+    border: 2px solid #000;
+    text-align: center;
+}
+
+.container h2 {
+    margin-bottom: 30px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #000;
+}
+
+.container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.container input {
+    width: 100%;
+    padding: 10px;
+    background: #fff;
+    border: 1px solid #000;
+    font-size: 14px;
+    color: #000;
+    box-sizing: border-box;
+}
+
+.container input:focus {
+    outline: none;
+    border-width: 2px;
+}
+
+.container button {
+    width: 100%;
+    padding: 10px;
+    background: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+.container button:hover {
+    background: #333;
+}
+
+.container p {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #000;
+}
+
+.container a {
+    color: #000;
+    text-decoration: underline;
+}
+
+.container a:hover {
+    color: #666;
+}

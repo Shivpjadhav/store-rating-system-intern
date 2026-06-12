@@ -1,0 +1,401 @@
+/* Register.css */
+
+/* Import elegant fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+.register-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  font-family: 'Poppins', sans-serif;
+  padding: 20px;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.register-box {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 30px;
+  padding: 50px 40px;
+  width: 100%;
+  max-width: 450px;
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.2),
+    0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+  transform: translateY(0);
+  animation: slideUp 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.register-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 
+    0 30px 50px rgba(0, 0, 0, 0.3),
+    0 0 0 2px rgba(255, 255, 255, 0.2) inset;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.register-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 40px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1px;
+  position: relative;
+  animation: fadeIn 1s ease 0.2s both;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.register-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 2px;
+  animation: expandWidth 1s ease 0.5s both;
+}
+
+@keyframes expandWidth {
+  from { width: 0; }
+  to { width: 60px; }
+}
+
+.register-fields {
+  animation: fadeIn 1s ease 0.4s both;
+}
+
+.register-input {
+  width: 100%;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  border: 2px solid #e0e0e0;
+  border-radius: 15px;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  background: white;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.register-input:hover {
+  border-color: #b8b8ff;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
+}
+
+.register-input:focus {
+  border-color: #667eea;
+  box-shadow: 0 5px 20px rgba(102, 126, 234, 0.3);
+  transform: translateY(-2px);
+}
+
+.register-input::placeholder {
+  color: #aaa;
+  font-weight: 300;
+  font-size: 0.95rem;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.register-input:focus::placeholder {
+  opacity: 0;
+  transform: translateX(10px);
+}
+
+/* Specific styling for different input types */
+.register-input[type="password"] {
+  letter-spacing: 2px;
+}
+
+.register-btn {
+  width: 100%;
+  padding: 16px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  border-radius: 15px;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  position: relative;
+  overflow: hidden;
+  animation: fadeIn 1s ease 0.8s both;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  margin-top: 10px;
+}
+
+.register-btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s ease, height 0.6s ease;
+}
+
+.register-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.5);
+  letter-spacing: 3px;
+}
+
+.register-btn:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.register-btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.login-link-text {
+  text-align: center;
+  margin-top: 25px;
+  color: #666;
+  font-size: 0.95rem;
+  animation: fadeIn 1s ease 1s both;
+}
+
+.login-link-text a {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.login-link-text a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  transition: width 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.login-link-text a:hover {
+  color: #764ba2;
+}
+
+.login-link-text a:hover::after {
+  width: 100%;
+}
+
+/* Rocket emoji animation */
+.register-title span {
+  display: inline-block;
+  animation: rocketFloat 2s ease-in-out infinite;
+}
+
+@keyframes rocketFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-5px) rotate(5deg);
+  }
+}
+
+/* Input field icons or indicators (optional) */
+.register-input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.register-input-wrapper i {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #aaa;
+  transition: color 0.3s ease;
+}
+
+.register-input-wrapper:hover i {
+  color: #667eea;
+}
+
+/* Animation for each input field */
+.register-input:nth-of-type(1) {
+  animation: fadeInRight 0.6s ease 0.3s both;
+}
+.register-input:nth-of-type(2) {
+  animation: fadeInRight 0.6s ease 0.5s both;
+}
+.register-input:nth-of-type(3) {
+  animation: fadeInRight 0.6s ease 0.7s both;
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Pulse animation for register button */
+.register-btn {
+  animation: registerPulse 2s infinite, fadeIn 1s ease 0.8s both;
+}
+
+@keyframes registerPulse {
+  0% {
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  }
+  50% {
+    box-shadow: 0 4px 25px rgba(102, 126, 234, 0.6);
+  }
+  100% {
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  }
+}
+
+/* Password strength indicator (optional enhancement) */
+.password-strength {
+  height: 4px;
+  background: #e0e0e0;
+  border-radius: 2px;
+  margin: -10px 0 15px 0;
+  overflow: hidden;
+  animation: fadeIn 0.6s ease 0.9s both;
+}
+
+.password-strength-bar {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, #ff4444, #ffbb33, #00C851);
+  transition: width 0.3s ease;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+  .register-box {
+    padding: 40px 25px;
+  }
+  
+  .register-title {
+    font-size: 2rem;
+  }
+  
+  .register-input {
+    padding: 12px 15px;
+  }
+  
+  .register-btn {
+    padding: 14px;
+  }
+}
+
+/* Optional: Background pattern */
+.register-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" opacity="0.1"><path d="M20 20 L80 20 L80 80 L20 80 Z" fill="none" stroke="white" stroke-width="2"/><circle cx="50" cy="50" r="15" fill="none" stroke="white" stroke-width="2"/></svg>') repeat;
+  pointer-events: none;
+}
+
+/* Floating labels effect (if you want to add labels later) */
+.register-input:focus + .floating-label,
+.register-input:not(:placeholder-shown) + .floating-label {
+  transform: translateY(-25px);
+  font-size: 0.85rem;
+  color: #667eea;
+}
+
+/* Success state for inputs (when valid) */
+.register-input.valid {
+  border-color: #00C851;
+  background: rgba(0, 200, 81, 0.05);
+}
+
+/* Error state for inputs */
+.register-input.error {
+  border-color: #ff4444;
+  background: rgba(255, 68, 68, 0.05);
+  animation: shake 0.3s ease;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+/* Success message animation */
+.success-message {
+  text-align: center;
+  color: #00C851;
+  margin-top: 15px;
+  font-size: 0.9rem;
+  animation: slideDown 0.5s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
